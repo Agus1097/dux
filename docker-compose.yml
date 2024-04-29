@@ -1,0 +1,13 @@
+version: "26.2"
+
+services:
+  dux-app:
+    container_name: dux-app
+    image: challenge-dux-app:1.0.0
+    build: .
+    ports:
+      - 8080:8080
+    environment:
+      - DATABASE_URL=jdbc:h2:mem:dux
+      - DATABASE_USERNAME=sa
+      - DATABASE_PASSWORD=duxtest24
